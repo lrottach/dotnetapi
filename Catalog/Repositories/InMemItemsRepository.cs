@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace Catalog.Repositories
 {
-    public class InMemItemsRepository
+    public class InMemItemsRepository : IItemsRepository
     {
-        private readonly List<Item> items = new() 
+        private readonly List<Item> items = new()
         {
             new Item { Id = Guid.NewGuid(), Name = "Potion", Price = 9, CreatedDate = DateTime.UtcNow },
             new Item { Id = Guid.NewGuid(), Name = "Iron Sword", Price = 20, CreatedDate = DateTime.UtcNow },
